@@ -6,8 +6,8 @@ url: "https://pentasecurity.github.io"
 theme_settings:
   # Meta
   title: Penta Security Tech
-  avatar: assets/img/triangle.svg
-  favicon: assets/favicon.png
+  avatar: assets/img/pensl_icon.png
+  favicon: assets/favicons.png
   gravatar: # Email MD5 hash
   description: Penta Security Technical Blog
 
