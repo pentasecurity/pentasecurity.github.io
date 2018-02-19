@@ -1,8 +1,8 @@
 ---
 layout: page
-title: About Penta Security
+title: About
 permalink: /about/
-feature-img: "assets/img/pexels/circuit.jpeg"
+feature-img: "assets/img/pexels/Our-foundations_bg.png"
 tags: [About]
 ---
 
