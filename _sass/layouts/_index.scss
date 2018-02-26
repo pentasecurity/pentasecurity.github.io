@@ -1,0 +1,73 @@
+// Header text feature
+.call-out {
+    padding-top: 15%;
+    display: inline-block;
+    width: 100%;
+    color: $header-desc-text-color;
+    background: $header-desc-background-color no-repeat center top;
+    background-size: cover;
+
+    /* --- Responsive --- */
+    @media screen and (max-width: 850px) {
+        background-size: 100% auto;
+    }
+
+    //For white images
+    p,
+    a,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @extend .header-txt-shadow;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#main {
+    background-position: 100% 0px, 0% center, center top;
+}
+
+// Post listing
+.posts {
+    .post-teaser {
+        padding-top: 1%;
+        width: 100%;
+        margin-bottom: 0;
+        display: inline-block;
+        background-size: $feature-image-size;
+        border-bottom: 1px solid $border-color;
+        p a {
+            @extend .body-link;
+        }
+    }
+    .post-main {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .excerpt {
+        margin-top: 1em;
+    }
+}
+
+// Pagination
+.pagination {
+    padding: $padding-small $padding-large 0 $padding-large;
+    text-align: center;
+    @media (max-width: 600px) {
+        padding: $padding-small;
+    }
+
+    .button {
+        margin: 0 1.5em;
+        i {
+            vertical-align: middle;
+        }
+    }
+
+}

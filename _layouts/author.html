@@ -1,0 +1,62 @@
+---
+layout: default
+---
+<div class="home">
+  {% if page.background %}
+    {% assign background_image = page.background %}
+  {% else %}
+    {% assign background_image = site.theme_settings.header_text_feature_image %}
+  {% endif %}
+
+  <div id="author-info" class="author-info" float: left; style="background-image: url('{{ site.baseurl }}/{{ background_image }}')">
+    <div class="author-profile" style="background-image:url(/{{ page.image | default: ''}});"></div>
+    <div class="author-text">
+        <p class="author-name">{{ page.title }} ({{ page.desc }})</p>
+      {% if page.link %}
+        <p class="author-link">{{ page.link }}</p>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="posts">
+    {% for post in site.posts %}
+    {% if post.author == page.name %}
+    <div class="post-teaser">
+      <span>
+          <header>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                {{ post.title }}
+              </a>
+            </h2>
+            <p class="meta">
+              {% assign author = site.authors | where: 'name', page.author | first %}
+              {{ post.date | date: "%B %-d, %Y" }} | {{ author.title }}
+            </p>
+          </header>
+          <div class="excerpt">
+            {{ post.description | strip_html | truncate: "250" }}
+          </div>
+      </span>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      <i class="fa fa-chevron-left"></i>
+      {{ site.theme_settings.str_previous_page }}
+    </a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="button" >
+      {{ site.theme_settings.str_next_page }}
+      <i class="fa fa-chevron-right"></i>
+    </a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

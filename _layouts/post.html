@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% assign author = site.authors | where: 'name', page.author | first %}
+<article {% if page.feature-img %}class="feature-image"{% endif %}>
+  <header id="main" style="background-image: url('{{ site.baseurl }}/{{ page.feature-img }}')">
+    <h1 id="{{ page.title | cgi_escape }}" class="title">{{ page.title }}</h1>
+    <p class="meta">
+    {{ page.date | date: "%B %-d, %Y" }}
+    {{ author.title }}
+    </p>
+  </header>
+
+  <section class="post-content">{{ content }}</section>
+
+   <!-- Tag list -->
+  {% capture tag_list %}{{ page.tags | join: "|"}}{% endcapture %}
+  {% include tags_list.html tags=tag_list %}
+
+   <div class="brief_author-info">
+   	<a class="brief_author-image" href="{{ site.baseurl }}/authors/{{ author.name }}">
+   		<div class="brief_author-profile" style="background-image:url(/{{ author.image | default: ''}});"></div>
+   	</a>
+	<div class="brief_author-text">
+    {% if author.link %}
+   		<a class="brief_author-name" href="{{ author.link }}">{{ author.title }}</a>
+    {% else %}
+   		<p class="brief_author-name">{{ author.title }}</p>
+    {% endif %}
+   		<p class="brief_author-desc">{{ author.desc }}</p>
+	</div>
+   </div>
+</article>
+
+<!-- Disqus -->
+{% if site.theme_settings.disqus_shortname %}
+<div class="comments">
+  {% include disqus.html %}
+</div>
+{% endif %}
+
+<!-- Post navigation -->
+{% if site.theme_settings.post_navigation %}
+  {% include post_nav.html %}
+{% endif %}

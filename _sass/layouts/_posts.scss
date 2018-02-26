@@ -1,0 +1,175 @@
+article,
+.comments {
+    @extend %padding-regular;
+    border-bottom: 1px solid $border-color;
+    width: 100%;
+}
+
+article {
+	max-width: 980px;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-right: 10px;
+	padding-left: 10px;
+
+  header {
+    margin-bottom: 6%;
+    text-align: center;
+  }
+  a:hover {
+    @extend .body-link;
+   }
+
+  .footnotes {
+    font-size: 0.9em;
+  }
+
+  .post-content {
+    @extend %padding-regular;
+		margin-right: 15px;
+		margin-left: 15px;
+    padding-bottom: 0;
+		padding-right: 10px;
+		padding-left: 10px;
+  }
+}
+
+footer {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0.9em;
+    display: inline-block;
+    text-align: center;
+    .meta {
+        color: rgba($text-color, .5);
+        letter-spacing: 0.1em;
+        display: inline;
+        text-transform: uppercase;
+    }
+    a.button {
+        margin-left: 1em;
+    }
+}
+
+header {
+    h1 {
+        margin: 0;
+    }
+}
+
+.meta {
+    color: rgba($text-color, .5);
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* --- Feature image --- */
+
+.feature-image {
+    padding: 0;
+    .post-link {
+        color: $feature-image-text-color;
+    }
+    header {
+        color: $feature-image-text-color;
+        background-size: $feature-image-size;
+        margin-bottom: 0;
+        padding: $padding-large/2.5 $padding-large;
+        .meta {
+            color: rgba($feature-image-text-color, .7);
+        }
+    }
+    .post-content {
+		  margin-right: 15px;
+		  margin-left: 15px;
+      padding-bottom: 0;
+		  padding-right: 10px;
+		  padding-left: 10px;
+    }
+
+    footer {
+        @extend %padding-regular;
+        padding-top: 0;
+    }
+}
+
+// Responsive scrolling
+.feature-image header {
+    @media screen and (max-width: $break) {
+        padding: $padding-small $padding-small;
+    }
+}
+
+.brief_author-info {
+	float: left;
+	width: 100%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 30px;
+	padding-right: 30px;
+
+	.brief_author-image {
+		float: left;
+    	top: 30px;
+
+    	.brief_author-profile {
+    		width: 60px;
+    		height: 60px;
+    		margin: 0;
+    		border-radius: 100%;
+    		background-size: cover;
+   		}
+	}
+
+	.brief_author-text {
+		float: left;
+		margin-left: 20px;
+		margin-top: 5px;
+		margin-bottom: 5px;
+
+    	.brief_author-name {
+      		font-size: 18px;
+			margin-bottom: 0;
+    	}
+
+    	.brief_author-desc {
+    		font-size: 16px;
+    	}
+	}
+}
+
+/* --- Post navigation --- */
+
+#post-nav {
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    float: left;
+
+    a,
+    .page-title {
+        display: inline-block;
+    }
+
+    .page-title {
+        font-size: 1.2em;
+        margin-bottom: 1em;
+        width: 100%;
+    }
+
+    a {
+        padding: 2em 3em;
+        border: 1px solid rgba(255, 255, 255, 0);
+        text-align: center;
+        width: 50%;
+    }
+
+    i {
+        vertical-align: middle;
+    }
+}

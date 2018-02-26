@@ -1,0 +1,76 @@
+# SITE CONFIGURATION
+baseurl: ""
+url: "https://pentasecurity.github.io"
+timezone: Asia/Seoul
+
+# THEME-SPECIFIC CONFIGURATION
+theme_settings:
+  # Meta
+  title: Penta Security
+  avatar: assets/logo.png
+  favicon: assets/favicon.ico
+  gravatar: # Email MD5 hash
+  description: "Pentasecurity Tech Blog"
+
+  # Header and footer text
+  header_text_feature_image: assets/img/default/main.png
+  footer_text: >
+   <a href=://"https://www.pentasecurity.co.kr/">Penta Security Systems</a> Inc. All rights reserved.
+
+  # Icons
+  rss: true
+  email_address: "opensource@pentasecurity.com"
+  facebook: "pentasecsystems"
+  github: "pentasecurity"
+  linkedin: "https://www.linkedin.com/company/penta-security-systems-inc-/"
+  youtube: "UCAqbP2yZgegkM5G6rKGsCHw"
+
+  # Scripts / Features
+  google_analytics: # Tracking ID, e.g. "UA-000000-01"
+  disqus_shortname:
+  katex: true # Enable if using math markup
+  search: true
+  tags: true
+
+  # Localization strings
+  str_follow_on: "Follow on"
+  str_rss_follow: "RSS 추가"
+  str_email: "Email"
+  str_next_post: "다음 글"
+  str_previous_post: "이전 글"
+  str_next_page: "다음"
+  str_previous_page: "이전"
+  str_continue_reading: "계속 읽기"
+  str_javascript_required_disqus: "Please enable JavaScript to view comments."
+
+  # Colours, typography and padding
+  # Open the "_sass > base" folder, and open "_variables.scss"
+  google_fonts: "Source+Sans+Pro:400,700,700italic,400italic"
+
+  # Post navigation
+  post_navigation: true
+
+# PAGINATION
+paginate: 5
+paginate_path: "blog/page:num"
+
+collections:
+  authors:
+    output: true
+    permalink: /authors/:path/
+
+defaults:
+  - scope:
+      path: ''
+      type: authors
+    values:
+      layout: author
+
+# BUILD SETTINGS
+markdown: kramdown
+highlighter: rouge
+sass:
+  sass_dir: _sass
+  style: :compressed
+plugins: [jekyll-paginate, jekyll-seo-tag]
+exclude: ["Gemfile", "Gemfile.lock", "*.gem", "LICENSE", "README.md"]
