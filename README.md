@@ -50,7 +50,7 @@ link: https://github.com/kssim
 1. ruby-dev, gem bundler, build-essential 을 설치합니다.  
    * Debian 기준 <code>apt-get install ruby-dev gem bundler build-essential</code>  
 2. Jekyll 3.6.2 버전 이상을 설치합니다.  
-   * <code>gem install jekyll</code>
+   * <code>gem install jekyll</code>  
    * liquid 패키지에서 문제가 생길수도 있는데, 시스템에 설치된 패키지를 삭제하고, 최신 버전을 받아주면 됩니다.
        * <code>gem install jekyll</code>
 3. 소스 코드를 clone 받습니다.
