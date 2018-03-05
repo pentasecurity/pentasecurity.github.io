@@ -40,19 +40,22 @@ background: assets/img/authors/kssim-background.jpg
 link: https://github.com/kssim
 ---
 ```
-* image 는 글 작성자 정보에 표시될 사진입니다.
+* image 는 글 작성자 정보에 표시될 사진입니다.  
     * 사진 파일은 예제에 표시된 경로에 둡니다. <code>assets/img/authors/</code>
 * background 는 글 작성자 정보 화면의 메인 사진입니다.
 * link 는 글 작성자 이름을 클릭했을때 링크될 페이지입니다.
 
 
 ## 작성 글 테스트 방법
-1. Jekyll 3.6.2 버전 이상을 설치합니다.
-   * [Debian 8 에서 jekll 3.6.2 버전 설치 방법](https://unix.stackexchange.com/a/340482)
-2. ruby-dev 와 bundle 을 설치합니다.
+1. ruby-dev, gem bundler, build-essential 을 설치합니다.  
+   * Debian 기준 <code>apt-get install ruby-dev gem bundler build-essential</code>  
+2. Jekyll 3.6.2 버전 이상을 설치합니다.  
+   * <code>gem install jekyll</code>
+   * liquid 패키지에서 문제가 생길수도 있는데, 시스템에 설치된 패키지를 삭제하고, 최신 버전을 받아주면 됩니다.
+       * <code>gem install jekyll</code>
 3. 소스 코드를 clone 받습니다.
 4. 소스 코드의 최상단에서 <code>sudo bundle install</code>를 실행합니다.
-5. jekyll 을 이용해서 서버를 띄웁니다.
+5. jekyll 을 이용해서 서버를 띄웁니다.  
     * <code>jekyll serve -H [HOST IP] -P [PORT]</code>
 
 
