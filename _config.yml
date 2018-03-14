@@ -27,7 +27,6 @@ theme_settings:
 
   # Scripts / Features
   google_analytics: # Tracking ID, e.g. "UA-000000-01"
-  disqus_shortname:
   katex: true # Enable if using math markup
   search: true
   tags: true
@@ -41,7 +40,6 @@ theme_settings:
   str_next_page: "다음"
   str_previous_page: "이전"
   str_continue_reading: "계속 읽기"
-  str_javascript_required_disqus: "Please enable JavaScript to view comments."
 
   # Colours, typography and padding
   # Open the "_sass > base" folder, and open "_variables.scss"
