@@ -1,13 +1,26 @@
+$media-tag-middle-size-width: 960px;
+$media-tag-small-size-width: 500px;
+
 // Typography
 $font-family-main: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 $font-family-headings: 'Source Sans Pro', Helvetica, Arial, sans-serif;
 $font-size: 1.25em;
 
+// font-size
+$font-size-basic: 7px;
+
+// profile image
+$round-profile-img-width: 10px;
+$round-profile-img-height: 10px;
+$round-profile-img-margin: 5px;
+
+
 
 // Padding
-$padding-large: 20%;
+$padding-large: 10%;
 $padding-small: 5%;
 $padding-x-small: 3%;
+
 
 // Brand colours
 $brand-color: #fff;
