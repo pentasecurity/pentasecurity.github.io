@@ -30,13 +30,10 @@ layout: default
               </a>
             </h2>
             <p class="meta">
-              {% assign author = site.authors | where: 'name', page.author | first %}
+              {% assign author = site.authors | where: 'name', page.name | first %}
               {{ post.date | date: "%B %-d, %Y" }} | {{ author.title }}
             </p>
           </header>
-          <div class="excerpt">
-            {{ post.description | strip_html | truncate: "250" }}
-          </div>
       </span>
     </div>
     {% endif %}
