@@ -1,21 +1,4 @@
 // Mix-ins
-%padding-small {
-  padding: $padding-x-small $padding-x-small * 2;
-  @media (max-width: 1000px) {
-    padding: $padding-x-small $padding-x-small;
-  }
-}
-
-%padding-regular {
-  padding: $padding-small $padding-large;
-  @media (max-width: 1000px) {
-    padding: $padding-small * 1.5 $padding-large / 1.6;
-  }
-  @media (max-width: 576px) {
-    padding: $padding-small;
-  }
-}
-
 %font-title {
   font-size: $font-size-basic * 6.5;
   @media (max-width: $media-tag-middle-size-width) {
@@ -72,6 +55,29 @@
     margin-left: $round-profile-img-margin * 2;
   }
 }
+
+
+
+%padding-small {
+  padding: $padding-x-small $padding-x-small * 2;
+  @media (max-width: 1000px) {
+    padding: $padding-x-small $padding-x-small;
+  }
+}
+
+%padding-regular {
+  padding: $padding-small $padding-large;
+  @media (max-width: 1000px) {
+    padding: $padding-small * 1.5 $padding-large / 1.6;
+  }
+  @media (max-width: 576px) {
+    padding: $padding-small;
+  }
+}
+
+
+
+
 
 .header-txt-shadow {
   text-shadow: 1px 1px 2px $text-shadow;

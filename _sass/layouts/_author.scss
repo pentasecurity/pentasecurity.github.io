@@ -9,11 +9,6 @@
   background: $header-desc-background-color no-repeat;
   background-size: $feature-image-size;
 
-  /* --- Responsive --- */
-  @media screen and (max-width: 850px) {
-    background-size: 100% auto;
-  }
-
   //For white images
   p,
   a,
