@@ -1,4 +1,103 @@
 // Mix-ins
+%navbar-padding {
+	padding: $navbar-img-padding * 4 $navbar-img-padding * 4;
+  @media (max-width: $media-tag-middle-size-width) {
+		padding: $navbar-img-padding * 3 $navbar-img-padding * 3;
+	}
+  @media (max-width: $media-tag-small-size-width) {
+		padding: $navbar-img-padding * 2 $navbar-img-padding * 2;
+	}
+}
+
+%navbar-img {
+  width: $navbar-img-width * 11;
+  height: $navbar-img-width * 11;
+
+  @media (max-width: $media-tag-middle-size-width) {
+    width: $navbar-img-width * 9;
+    height: $navbar-img-width * 9;
+  }
+  @media (max-width: $media-tag-small-size-width) {
+    width: $navbar-img-width * 4;
+    height: $navbar-img-width * 4;
+  }
+}
+
+%navbar-title {
+	font-size: $font-size-basic * 2.8;
+	margin: $navbar-img-margin * 3;
+  @media (max-width: $media-tag-middle-size-width) {
+		font-size: $font-size-basic * 2.2;
+		margin: $navbar-img-margin * 2;
+  }
+  @media (max-width: $media-tag-small-size-width) {
+		font-size: $font-size-basic * 0.8;
+		margin: $navbar-img-margin * 1;
+  }
+}
+
+%navbar-nav {
+	list-style: none;
+	ul {
+		@extend %navbar-padding;
+  	list-style: none;
+  	line-height: 1.5;
+ 		float: right;
+ 		text-align: right;
+	}
+	li {
+ 		display: inline;
+ 		float: left;
+   	margin-right: 10px;
+	}
+	a {
+ 		&:hover {
+   	color: $link-color;
+ 		}
+		&#pull {
+ 			display: none;
+ 			i {
+				@extend %navbar-padding;
+   		 	float: right;
+			}
+ 		}
+	}
+  @media (max-width: $media-tag-small-size-width) {
+		height: auto;
+
+		ul {
+ 			float: none;
+			display: none;
+			height: auto;
+		}
+		li {
+ 			width: 100%;
+			height: 15px;
+			float: left;
+			position: relative;
+   		margin-right: 0px;
+		}
+ 		a {
+			padding: $navbar-img-padding $navbar-img-padding;
+			text-align: left;
+ 	  	width: 100%;
+
+ 		 	&#pull {
+ 	  		display: block;
+ 	    	width: 100%;
+ 	    	position: relative;
+
+ 	    	&:after {
+ 	    		content: "";
+ 	      	display: inline-block;
+					position: absolute;
+   	  	}
+   		}
+	 	}
+  }
+}
+
+
 %font-title {
   font-size: $font-size-basic * 6.5;
   @media (max-width: $media-tag-middle-size-width) {
